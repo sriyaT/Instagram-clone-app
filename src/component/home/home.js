@@ -35,7 +35,7 @@ export default class Home extends Component {
             </div>
             <div className='no-account'>
               <h5>Don't have an account?</h5>
-              <a href='#'>Sign up</a>
+              <a href='#home'>Sign up</a>
             </div>
             <div className='app-store'>
               <h3>Get the app.</h3>
