@@ -6,16 +6,32 @@ import pic3 from '../../image/instagram-pic-3.jpg';
 import pic4 from '../../image/instagram-pic-4.jpg';
 import pic5 from '../../image/instagram-pic-5.jpg';
 
+const picArray = [pic1, pic2, pic3, pic4, pic5];
+
 export default class HomeLeft extends Component {
+  state = {
+    imageIndex: 0,
+  };
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({
+        imageIndex: (this.state.imageIndex + 1) % 5,
+      });
+    }, 2000);
+  }
+
   render() {
+    const { imageIndex } = this.state;
     return (
       <div className='images-container'>
         <div className='container'>
-          <img className='pic1' src={pic1} alt='pic1'></img>
-          <img className='pic1' src={pic2} alt='pic2'></img>
-          <img className='pic1' src={pic3} alt='pic3'></img>
-          <img className='pic1' src={pic4} alt='pic4'></img>
-          <img className='pic1' src={pic5} alt='pic5'></img>
+          {picArray.map((item, index) => {
+            const showClass = index === imageIndex ? 'show' : '';
+            return (
+              <img className={`pic1 ${showClass}`} src={item} alt='pic1' />
+            );
+          })}
         </div>
       </div>
     );

@@ -21,11 +21,25 @@
   top: 0;
   visibility: hidden;
   width: 240px;
+  transition: all 3s;
+}
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+.display {
+  transition: opacity 1.5s ease-in;
+  z-index: 2;
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 1.5),
   screen and (min-resolution: 1.5dppx) {
   .container {
     background-image: url('../../image/insta-1.png');
+  }
+}
+@media (max-width: 875px) {
+  .images-container {
+    display: none;
   }
 }
