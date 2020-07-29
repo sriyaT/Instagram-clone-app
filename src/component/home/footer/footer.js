@@ -5,7 +5,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div className='footer'>
-        <nav>
+        <div className='footer-link'>
           <a href='#about'>ABOUT</a>
           <a href='#help'>HELP</a>
           <a href='#press'>PRESS</a>
@@ -17,7 +17,7 @@ export default class Footer extends Component {
           <a href='#topAccounts'>TOP ACCOUNTS</a>
           <a href='#hashTags'>HASHTAGS</a>
           <a href='#language'>LANGUAGE</a>
-        </nav>
+        </div>
 
         <span>© 2020 INSTAGRAM FROM FACEBOOK</span>
       </div>
